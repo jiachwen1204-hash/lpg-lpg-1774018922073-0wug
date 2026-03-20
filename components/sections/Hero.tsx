@@ -35,7 +35,7 @@ export default function Hero() {
         aria-hidden
         className="absolute inset-0 pointer-events-none opacity-30"
         style={{
-          backgroundImage: 'radial-gradient(circle, rgba(14, 165, 233, 0.15) 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, color-mix(in_oklch, var(--brand-500) 15%, transparent) 1px, transparent 1px)',
           backgroundSize: '40px 40px',
           maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent)',
         }}

@@ -10,7 +10,7 @@ const CONTENT = {
 
 export default function CTA() {
   return (
-    <section className="py-section relative overflow-hidden bg-[#080810]">
+    <section className="py-section relative overflow-hidden bg-surface">
       <div
         aria-hidden
         className="absolute inset-0 pointer-events-none"
@@ -45,7 +45,7 @@ export default function CTA() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <AnimateIn>
-          <p className="text-sm font-medium tracking-widest uppercase text-brand-400 mb-4">
+          <p className="text-sm font-medium tracking-widest uppercase text-brand-400 mb-4 font-heading">
             {CONTENT.eyebrow}
           </p>
           <h2 className="font-heading font-black text-display-xl text-white leading-tight mb-6">
@@ -53,7 +53,7 @@ export default function CTA() {
               {CONTENT.heading}
             </span>
           </h2>
-          <p className="text-lg text-white/60 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-lg text-white/60 mb-10 max-w-2xl mx-auto leading-relaxed font-body font-light">
             {CONTENT.subtext}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -26,7 +26,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="relative bg-[#0a0a0f] border-t border-white/5">
+    <footer className="relative bg-[var(--color-surface)] border-t border-white/5">
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-brand-500/5 via-transparent to-transparent pointer-events-none" />
       
@@ -42,7 +42,7 @@ export default function Footer() {
                 <img 
                   src="https://u5ft5besqtymo1lf.public.blob.vercel-storage.com/logos/1774018920481-ai-artificial-intelligence-improves-emai-600nw-2655586379.webp" 
                   alt="Meh Ai logo" 
-                  className="h-10 w-auto object-contain transition-opacity group-hover:opacity-80" 
+                  className="h-10 w-auto object-contain transition-opacity duration-200 group-hover:opacity-80" 
                 />
               </Link>
               <p className="mt-4 text-sm text-white/50 max-w-xs leading-relaxed">
@@ -54,7 +54,7 @@ export default function Footer() {
                 <div className="absolute inset-0 bg-brand-500/30 blur-xl rounded-pill scale-110" />
                 <Link 
                   href="#contact" 
-                  className="relative z-10 px-5 py-2.5 rounded-pill bg-brand-500 text-white text-sm font-medium hover:bg-brand-600 transition-all hover:scale-[1.02]"
+                  className="relative z-10 px-5 py-2.5 rounded-pill bg-brand-500 text-white text-sm font-medium hover:bg-brand-600 transition-all duration-200 hover:scale-[1.02]"
                 >
                   Request Demo
                 </Link>
@@ -64,7 +64,7 @@ export default function Footer() {
               <div className="mt-6 space-y-3">
                 <a
                   href={`mailto:${BRAND.email}`}
-                  className="flex items-center gap-2.5 text-sm text-white/50 hover:text-brand-400 transition-colors"
+                  className="flex items-center gap-2.5 text-sm text-white/50 hover:text-brand-400 transition-colors duration-200"
                 >
                   <Mail className="w-4 h-4" />
                   {BRAND.email}
@@ -88,7 +88,7 @@ export default function Footer() {
                   <li key={l.href}>
                     <a 
                       href={l.href} 
-                      className="text-sm text-white/50 hover:text-brand-400 transition-colors inline-flex items-center gap-1.5 group"
+                      className="text-sm text-white/50 hover:text-brand-400 transition-colors duration-200 inline-flex items-center gap-1.5 group"
                     >
                       <span className="w-0 h-px bg-brand-500 group-hover:w-3 transition-all duration-300" />
                       {l.label}
@@ -108,14 +108,14 @@ export default function Footer() {
               <div className="flex gap-3 mb-8">
                 <a 
                   href="#" 
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-brand-400 hover:border-brand-500/30 transition-all"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-brand-400 hover:border-brand-500/30 transition-all duration-200"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-4 h-4" />
                 </a>
                 <a 
                   href="#" 
-                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-brand-400 hover:border-brand-500/30 transition-all"
+                  className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:text-brand-400 hover:border-brand-500/30 transition-all duration-200"
                   aria-label="Twitter"
                 >
                   <Twitter className="w-4 h-4" />
@@ -130,7 +130,7 @@ export default function Footer() {
                   <li key={l.href}>
                     <Link 
                       href={l.href} 
-                      className="text-sm text-white/50 hover:text-brand-400 transition-colors"
+                      className="text-sm text-white/50 hover:text-brand-400 transition-colors duration-200"
                     >
                       {l.label}
                     </Link>
