@@ -1,50 +1,88 @@
 import AnimateIn from '@/components/ui/AnimateIn'
 
-// @lpg: Replace with a compelling, company-specific CTA
 const CONTENT = {
-  eyebrow:   'Ready to get started?',
-  heading:   'Take Your Business to the Next Level',
-  subtext:   'Join hundreds of businesses that have transformed their operations with our help.',
-  cta:       { label: 'Start Today',    href: '#contact'  },
-  secondary: { label: 'View Our Work',  href: '#services' },
+  eyebrow: 'Transform Your Operations',
+  heading: 'Unified AI Intelligence for Limitless Innovation',
+  subtext: 'Empower your organization with integrated AI solutions that unify automation, analytics, and intelligent workflows into a centralized platform. Enhance efficiency, optimize decision-making, and drive scalable digital innovation.',
+  cta: { label: 'Request Demo', href: '#contact' },
+  secondary: { label: 'Learn More', href: '#features' },
 }
 
 export default function CTA() {
   return (
-    <section className="py-section relative overflow-hidden bg-surface">
-      {/* Brand glow */}
+    <section className="py-section relative overflow-hidden bg-[#080810]">
       <div
         aria-hidden
-        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+          maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent)',
+        }}
+      />
+
+      <div
+        aria-hidden
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
       >
-        <div className="w-[600px] h-[600px] rounded-full bg-brand-500/12 blur-[140px] animate-pulse-glow" />
+        <div className="w-[700px] h-[700px] rounded-full bg-brand-500/15 blur-[160px] animate-pulse-glow" />
       </div>
 
-      <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <div
+        aria-hidden
+        className="absolute top-[-30%] right-[-10%] w-[500px] h-[500px] rounded-full bg-brand-400/10 blur-[120px] pointer-events-none"
+      />
+
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '256px 256px',
+        }}
+      />
+
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <AnimateIn>
-          <p className="text-sm font-medium tracking-widest uppercase text-brand-500 mb-4">
+          <p className="text-sm font-medium tracking-widest uppercase text-brand-400 mb-4">
             {CONTENT.eyebrow}
           </p>
-          <h2 className="font-heading font-black text-display-xl text-content-primary leading-tight mb-6">
-            {CONTENT.heading}
+          <h2 className="font-heading font-black text-display-xl text-white leading-tight mb-6">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-brand-200 to-white bg-[length:200%_auto] animate-shimmer">
+              {CONTENT.heading}
+            </span>
           </h2>
-          <p className="text-lg text-content-secondary mb-10">{CONTENT.subtext}</p>
+          <p className="text-lg text-white/60 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+            {CONTENT.subtext}
+          </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={CONTENT.cta.href}
-              className="px-8 py-4 font-body font-medium bg-brand-500 text-content-inverse rounded-card hover:bg-brand-700 hover:shadow-glow transition-all ease-expo-out active:scale-[0.97]"
-            >
-              {CONTENT.cta.label}
-            </a>
+            <div className="relative inline-flex">
+              <div className="absolute inset-0 bg-brand-500/50 blur-2xl rounded-card scale-110 pointer-events-none" />
+              <a
+                href={CONTENT.cta.href}
+                className="relative px-8 py-4 font-body font-semibold bg-brand-500 text-white rounded-card hover:bg-brand-400 transition-all ease-expo-out active:scale-[0.97] shadow-glow"
+              >
+                {CONTENT.cta.label}
+              </a>
+            </div>
             <a
               href={CONTENT.secondary.href}
-              className="px-8 py-4 font-body font-medium border border-surface-border text-content-primary rounded-card hover:border-brand-500 hover:text-brand-500 transition-all ease-expo-out"
+              className="px-8 py-4 font-body font-medium border border-white/20 text-white/80 rounded-card hover:border-brand-400 hover:text-brand-400 hover:bg-brand-500/5 transition-all ease-expo-out"
             >
               {CONTENT.secondary.label}
             </a>
           </div>
         </AnimateIn>
       </div>
+
+      <div
+        aria-hidden
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-3/4 h-px"
+        style={{
+          background: 'linear-gradient(to right, transparent, rgba(99, 102, 241, 0.5), transparent)',
+        }}
+      />
     </section>
   )
 }
